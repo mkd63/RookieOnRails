@@ -10,7 +10,6 @@ class ServicesController < ApplicationController
   		else
     		render 'new'
   		end
-		redirect_to @service
 	end
 	def show
 		@service = Service.find(params[:id])
