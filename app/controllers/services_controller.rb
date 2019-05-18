@@ -5,7 +5,11 @@ class ServicesController < ApplicationController
 	def create
 		@service = Service.new(service_params)
 
-		@service.save
+		if @service.save
+    		redirect_to @service
+  		else
+    		render 'new'
+  		end
 		redirect_to @service
 	end
 	def show
