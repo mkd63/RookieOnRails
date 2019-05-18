@@ -1,0 +1,19 @@
+<h1>Listing articles</h1>
+ 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Message</th>
+    <th></th>
+  </tr>
+ 
+  <% @services.each do |service| %>
+    <tr>
+      <td><%= service.name %></td>
+      <td><%= service.email %></td>
+      <td><%= service.message %></td>
+      <td><%= link_to 'Show', service_path(service) %></td>
+    </tr>
+  <% end %>
+</table>
